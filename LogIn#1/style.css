@@ -1,118 +1,179 @@
+/* Import the "Ubuntu" font family from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 
+/* Set box-sizing to border-box for all elements */
 * {
     box-sizing: border-box;
 }
 
+/* Set height to 100% for html, body, and elements with class "wrapper" */
 html, body, .wrapper {
     height: 100%;
 }
 
+/* Styles for the body element */
 body {
+    /* Display the content as a grid and center it both horizontally and vertically */
     display: grid;
     place-items: center;
+    /* Remove default margin and apply some padding on the sides */
     margin: 0;
     padding: 0 24px;
+    /* Set a background image, repeat it not and cover the entire background */
     background-image: url("background.svg");
     background-repeat: no-repeat;
     background-size: cover;
+    /* Use the "Ubuntu" font family and set the text color to black */
     font-family: "Ubuntu";
     color: #000;
+    /* Apply an animation named "rotate" with a 6-second duration, infinite loop, and alternate direction */
     animation: rotate 6s infinite alternate linear;
 }
 
+/* Styles for the login card container */
 .login-card {
+    /* Position the element relatively within the document flow */
     position: relative;
+    /* Set the z-index to 3 to ensure it appears above other elements */
     z-index: 3;
+    /* Set the width to 100% */
     width: 100%;
+    /* Add some margin on the sides and top, and padding inside the container */
     margin: 0 20px;
     padding: 70px 30px 44px;
+    /* Add rounded corners to create a card-like appearance */
     border-radius: 1.25rem;
+    /* Set the background color to white */
     background: #fff;
+    /* Center the text inside the container */
     text-align: center;   
 }
 
+/* Styles for the heading inside the login card */
 .login-card > h2 {
+    /* Set the font size to 36px and font weight to 600 (bold) */
     font-size: 36px;
     font-weight: 600;
+    /* Add some margin at the bottom of the heading */
     margin: 0 0 12px;
 }
 
+/* Styles for the subheading inside the login card */
 .login-card > h3 {
+    /* Set the text color with some transparency */
     color: rgba(0, 0, 0, 0.38);
+    /* Add some margin at the bottom of the subheading */
     margin: 0 0 30px;
+    /* Set the font weight to 500 */
     font-weight: 500;
+    /* Set the font size to 1rem (16px) */
     font-size: 1rem;
 }
 
+/* Styles for the login form */
 .login-form {
+    /* Set the width to 100% */
     width: 100%;
+    /* Remove any default margin */
     margin: 0;
+    /* Display the form content as a grid and set the gap between grid items */
     display: grid;
     gap: 16px;
 }
 
+/* Styles for input fields and buttons inside the login form */
 .login-form > input, .login-form > button {
+    /* Set the width to 100% and the height to 50px */
     width: 100%;
     height: 50px;
 }
 
+/* Styles for the input fields inside the login form */
 .login-form > input {
+    /* Add a border with some padding and rounded corners */
     border: 2px solid #ebebeb;
-    font-family: inherit;
-    font-size: 15px;
+    font-family: inherit; /* Inherit the font-family from the parent element */
+    font-size: 15px; /* Set the font size to 15px */
     padding: 0 16px;
     border-radius: 1.25rem;
+    /* Add a transition effect for hover state */
     transition: all 0.375s;
 }
 
+/* Styles for the input fields when hovered */
 .login-form > input:hover {
+    /* Change the border color to #10449a on hover */
     border: 2px solid #10449a;
 }
 
+/* Styles for the buttons inside the login form */
 .login-form > button {
+    /* Set the cursor to pointer to indicate it's clickable */
     cursor: pointer;
+    /* Set the width to 100% and add some padding and rounded corners */
     width: 100%;
     padding: 0 16px;
     border-radius: 1.25rem;
+    /* Set the background color to #216ec7 and the text color to white */
     background: #216ec7;
     color: #f9f9f9;
+    /* Remove the default button border */
     border: 0;
+    /* Inherit the font-family from the parent element */
     font-family: inherit;
+    /* Set the font size to 1rem (16px) and font weight to 600 (bold) */
     font-size: 1rem;
     font-weight: 600;
+    /* Center the text inside the button and add some letter-spacing */
     text-align: center;
     letter-spacing: 2px;
+    /* Add a transition effect for hover state */
     transition: all 0.375s;
 }
 
+/* Styles for the buttons when hovered */
 .login-form > button:hover {
+    /* Change the background color to #001122 on hover */
     background:#001122;
 }
 
+/* Styles for the links inside the login form */
 .login-form > a {
+    /* Set the text color to #216ec7 */
     color: #216ec7;
+    /* Set the font size to 0.9rem (14.4px) */
     font-size: 0.9rem;
+    /* Align the text to the left */
     text-align: left;
+    /* Remove the default text decoration (underline) */
     text-decoration: none;
+    /* Add some margin at the bottom of the link */
     margin-bottom: 6px;
+    /* Add a transition effect for hover state */
     transition: all 0.375s;
 }
 
+/* Styles for the links when hovered */
 .login-form > a:hover {
+    /* Change the text color to #10449a on hover */
     color: #10449a;
 }
 
+/* Keyframes animation named "rotate" */
 @keyframes rotate {
+    /* At 100% of the animation, change the background position of the element */
     100% {
         background-position: 30% 60%;
     }
 }
 
-@media (width >= 500px) {
+/* Media query for screens with a width greater than or equal to 500px */
+@media (min-width: 500px) {
+    /* Remove padding on the body element */
     body {
         padding: 0;
     }
+    /* Adjust the margin and width of the login card container */
     .login-card {
         margin: 0;
         width: 400px;
